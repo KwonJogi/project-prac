@@ -8,6 +8,7 @@ const FooterWrapper = styled.footer`
   justify-content: center;
   background-color: #263343;
   color: white;
+  margin-top: 12px;
 `;
 
 const Footer = () => {
