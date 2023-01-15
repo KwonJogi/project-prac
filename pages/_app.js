@@ -2,19 +2,27 @@ import React from "react";
 import Layout from "../components/Layout";
 import reset from "styled-reset";
 import { createGlobalStyle } from "styled-components";
-import "@fortawesome/fontawesome-svg-core/styles.css";
+import { Provider } from "react-redux";
+import wrapper from "../store/configureStore";
+import Head from "next/head";
 
 const GlobalStyles = createGlobalStyle`
  ${reset}
 `;
 
-const _app = ({ Component }) => {
+const _app = ({ Component, ...rest }) => {
+  const { store, props } = wrapper.useWrappedStore(rest);
   return (
     <>
-      <GlobalStyles />
-      <Layout>
-        <Component />
-      </Layout>
+      <Provider store={store}>
+        <Head>
+          <title>portfolio-1</title>
+        </Head>
+        <GlobalStyles />
+        <Layout>
+          <Component {...props.pageProps} />
+        </Layout>
+      </Provider>
     </>
   );
 };
