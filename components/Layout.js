@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Footer from "./Footer";
 import Header from "./Header";
+import LoginForm from "./LoginForm";
 import Navigation from "./Navigation";
 
 const Wrapper = styled.div`
@@ -20,13 +21,25 @@ const DivWrapper = styled.div`
 `;
 
 const DivLeft = styled.div`
-  width: 20%;
+  width: 24%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const DivCenter = styled.div`
-  width: 60%;
+  width: 52%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const DivRight = styled.div`
-  width: 20%;
+  width: 24%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Layout = ({ children }) => {
@@ -35,7 +48,9 @@ const Layout = ({ children }) => {
       <Header />
       <Navigation />
       <DivWrapper>
-        <DivLeft>왼쪽</DivLeft>
+        <DivLeft>
+          <LoginForm />
+        </DivLeft>
         <DivCenter>{children}</DivCenter>
         <DivRight>오른쪽</DivRight>
       </DivWrapper>
