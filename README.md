@@ -18,3 +18,11 @@
   <br />
 
 </details>
+
+<details>
+
+  <summary>회원가입 버튼 클릭 시 데이터를 유지하지 않은 상태로 index 페이지로 이동하는 문제</summary>
+
+  <br />
+
+</details>
