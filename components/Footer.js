@@ -13,11 +13,7 @@ const FooterWrapper = styled.footer`
 
 const Footer = () => {
   return (
-    <>
-      <FooterWrapper>
-        Copyright 2022. JeongIn All rights reserved.
-      </FooterWrapper>
-    </>
+    <FooterWrapper>Copyright 2022. JeongIn All rights reserved.</FooterWrapper>
   );
 };
 
